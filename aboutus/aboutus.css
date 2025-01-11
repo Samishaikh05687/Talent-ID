@@ -14,75 +14,142 @@ body {
 
 /* Header */
 .header {
-    /* display: flex; */
-    /* justify-content: space-between; */
-    align-items: center;
-    background-color: white;
-    padding: 10px 20px;
-    color: #fff;
-}
-
-.header-bg{
-    padding: 30px 20px;
-    background-color: #a997c9;
     display: flex;
-    /* justify-content: space-between; */
-    border-radius: 50px;
+    justify-content: space-between;
     align-items: center;
-    width: 800px;
+    /* background-color: #ffffff; */
+    padding: 15px 30px;
+    border-radius: 15px;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  */
+    margin: 20px auto;
+    width: 90vw; /* Make the header responsive */
+  }
+
+  .header-bg {
+    padding: 30px 20px;
+    background-color: #baaad3; /* Same purple background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px;
+    width: 100%;
+    max-width: 1000px; /* Set a max width for better responsiveness */
     margin: auto;
     margin-top: 25px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Add depth with shadow */
+  }
 
-}
  .logo img{
     font-size: 1.5rem;
     font-weight: bold;
     width: 150px;
     height: 40px;
+    object-fit: contain; 
 }
 
-.nav ul {
+.nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+
+  .nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
-    margin-left: 120px;
-}
-
-.nav a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.2rem;
-    color: black;
-    font: bold;
+    gap: 20px; /* Increased spacing between nav items */
+    margin: 0; /* Remove extra margin */
+    padding: 0;
     align-items: center;
-}
+  }
+
+  .nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 600; /* Semi-bold for prominence */
+    transition: all 0.3s ease-in-out; /* Smooth hover animation */
+    padding: 10px 15px;
+    border-radius: 5px; /* Subtle rounded corners */
+  }
 
 .nav li{
     font-weight: 500;
 }
+#middle {
+  margin-right: 50px;
+}
 
-#login {
-    background-color: rgb(137, 43, 137);
+.nav a:hover {
     color: white;
-    padding: 5px 10px;
-    border-radius: 30px;
-}
+    transform: scale(1.1);
+  }
+  
+  /* Login Button */
+  #login a {
+    color: white;
+  }
 
-#login:hover{
+  #login {
+    background-color: #623b99; /* Same purple shade */
+    color: red;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out; /* Smooth transition effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+  }
+
+  #login:hover {
     background-color: white;
-}
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Highlight hover with shadow */
+  }
+  #login a:hover {
+    color: black;
+  }
+
 
 #demo {
-    background-color: #e4d1f4;
-    padding: 5px 15px;
-    border-radius: 25px;
-    font-weight: bold;
+  background-color: white; /* Light purple shade */
+  color: #333; /* Contrast text */
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
 }
 
-#demo:hover{
-    background-color: rgb(135, 136, 170);
-    color: white;
+/* Demo Button Hover */
+#demo:hover {
+  background-color: #2b1b44; /* Darker purple */
+  color: white;
+  transform: scale(1.1); /* Zoom in slightly on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
 }
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-bg {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  #login,
+  #demo {
+    margin: 10px 0;
+  }
+}
+
 
 /* About Section */
 .about-section {
@@ -128,9 +195,11 @@ body {
 .about-image {
     /* flex: 1 1 300px; */
     text-align: center;
-    width: 200px;
+    width: 250px;
     height: 200px;
     /* border: 1px black solid; */
+    border-radius: 20px;
+    box-shadow: 0 10px 16px rgba(0, 0, 0, 0.3);
 }
 
 .about-image img{
@@ -141,12 +210,15 @@ body {
 
 .mission{
     text-align: center;
+    margin-top:50px;
+    margin-bottom:40px;
 }
 
 .mission h2{
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 750;
     align-items: center;
+    color:black;
 }
 
 .mission p{
